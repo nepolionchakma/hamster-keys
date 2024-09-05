@@ -57,8 +57,8 @@ const HamsterKeyGenerator: React.FC = () => {
         const promoCode = await createCode(clientToken, game.promoId);
         updateProgress(100 / keyCount, "Generating key...");
         return promoCode;
-      } catch (error: any) {
-        alert(`Failed to generate key: ${error.message}`);
+      } catch (error) {
+        alert(`Failed to generate key: ${error}`);
         return null;
       }
     };
